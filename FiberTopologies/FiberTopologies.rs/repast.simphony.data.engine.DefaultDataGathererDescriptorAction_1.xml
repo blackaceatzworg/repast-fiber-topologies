@@ -1,0 +1,102 @@
+<repast.simphony.data.engine.DefaultDataGathererDescriptor>
+  <name>Equipments &amp; Cables count</name>
+  <dataSetId class="string">Equipments &amp; Cables count</dataSetId>
+  <scheduleParameters>
+    <start>1.0</start>
+    <interval>1.0</interval>
+    <priority>-Infinity</priority>
+    <duration>-1.0</duration>
+    <frequency>REPEAT</frequency>
+  </scheduleParameters>
+  <dataMappingContainer class="repast.simphony.data.logging.gather.DefaultDataMappingContainer">
+    <nameMappingTable>
+      <entry>
+        <string>Tick</string>
+        <repast.simphony.data.logging.gather.DefaultTimeDataMapping/>
+      </entry>
+      <entry>
+        <string>Optical Distribution Point</string>
+        <repast.simphony.data.logging.gather.MethodMapping>
+          <method>
+            <class>pt.isegi.unl.topology.TopologyBuilder</class>
+            <name>countODP</name>
+            <parameter-types/>
+          </method>
+        </repast.simphony.data.logging.gather.MethodMapping>
+      </entry>
+      <entry>
+        <string>Drop Cables</string>
+        <repast.simphony.data.logging.gather.MethodMapping>
+          <method>
+            <class>pt.isegi.unl.topology.TopologyBuilder</class>
+            <name>countDropCables</name>
+            <parameter-types/>
+          </method>
+        </repast.simphony.data.logging.gather.MethodMapping>
+      </entry>
+      <entry>
+        <string>Primary Cables</string>
+        <repast.simphony.data.logging.gather.MethodMapping>
+          <method>
+            <class>pt.isegi.unl.topology.TopologyBuilder</class>
+            <name>countPrimaryCables</name>
+            <parameter-types/>
+          </method>
+        </repast.simphony.data.logging.gather.MethodMapping>
+      </entry>
+      <entry>
+        <string>Secondary Cables</string>
+        <repast.simphony.data.logging.gather.MethodMapping>
+          <method>
+            <class>pt.isegi.unl.topology.TopologyBuilder</class>
+            <name>countSecondaryCables</name>
+            <parameter-types/>
+          </method>
+        </repast.simphony.data.logging.gather.MethodMapping>
+      </entry>
+      <entry>
+        <string>Optical Splice</string>
+        <repast.simphony.data.logging.gather.MethodMapping>
+          <method>
+            <class>pt.isegi.unl.topology.TopologyBuilder</class>
+            <name>countOS</name>
+            <parameter-types/>
+          </method>
+        </repast.simphony.data.logging.gather.MethodMapping>
+      </entry>
+    </nameMappingTable>
+    <mappingNameTable>
+      <entry>
+        <repast.simphony.data.logging.gather.DefaultTimeDataMapping reference="../../../nameMappingTable/entry/repast.simphony.data.logging.gather.DefaultTimeDataMapping"/>
+        <string>Tick</string>
+      </entry>
+      <entry>
+        <repast.simphony.data.logging.gather.MethodMapping reference="../../../nameMappingTable/entry[2]/repast.simphony.data.logging.gather.MethodMapping"/>
+        <string>Optical Distribution Point</string>
+      </entry>
+      <entry>
+        <repast.simphony.data.logging.gather.MethodMapping reference="../../../nameMappingTable/entry[6]/repast.simphony.data.logging.gather.MethodMapping"/>
+        <string>Optical Splice</string>
+      </entry>
+      <entry>
+        <repast.simphony.data.logging.gather.MethodMapping reference="../../../nameMappingTable/entry[4]/repast.simphony.data.logging.gather.MethodMapping"/>
+        <string>Primary Cables</string>
+      </entry>
+      <entry>
+        <repast.simphony.data.logging.gather.MethodMapping reference="../../../nameMappingTable/entry[3]/repast.simphony.data.logging.gather.MethodMapping"/>
+        <string>Drop Cables</string>
+      </entry>
+      <entry>
+        <repast.simphony.data.logging.gather.MethodMapping reference="../../../nameMappingTable/entry[5]/repast.simphony.data.logging.gather.MethodMapping"/>
+        <string>Secondary Cables</string>
+      </entry>
+    </mappingNameTable>
+  </dataMappingContainer>
+  <aggregateContainer class="repast.simphony.data.logging.gather.DefaultAggregateDataMappingContainer">
+    <nameMappingTable/>
+    <mappingNameTable/>
+    <alternatedNameTable/>
+    <nameAlternatedTable/>
+  </aggregateContainer>
+  <agentClass>pt.isegi.unl.topology.TopologyBuilder</agentClass>
+</repast.simphony.data.engine.DefaultDataGathererDescriptor>
