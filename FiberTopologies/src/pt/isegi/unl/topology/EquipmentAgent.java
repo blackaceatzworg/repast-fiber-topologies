@@ -390,7 +390,11 @@ public class EquipmentAgent extends Agent {
 	 */
 	@Parameter(usageName = "surveyCount", displayName = "Number of surveys supplied")
 	public int getSurveyCount(){
-		return this.getSurveyList().size();
+		int count = 0;
+		if (surveyList != null){
+			count = surveyList.size();
+		}
+		return count;
 	}
 
 	/**
