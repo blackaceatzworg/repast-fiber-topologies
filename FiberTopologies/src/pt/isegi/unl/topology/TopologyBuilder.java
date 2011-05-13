@@ -276,7 +276,7 @@ public class TopologyBuilder implements ContextBuilder<Object> {
 			writer.write(getGeography().getLayer(CableAgent.class).getName(), cfile.toURI().toURL());
 			
 			if (!efile.canRead() || !cfile.canRead())
-				System.out.println("Couldn't export toplogy layers!");
+				System.out.println("Couldn't export topology layers!");
 			
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
